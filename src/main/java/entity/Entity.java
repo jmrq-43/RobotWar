@@ -8,5 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Entity {
-
+    private String name;
+    private int health;
+    private int lives;
 }
