@@ -1,14 +1,13 @@
 package entity;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Builder
 @Getter
 @Setter
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class Entity {
-    private String name;
+    private final String name;
     private int health;
     private int lives;
 }
