@@ -2,11 +2,12 @@ package com.robot.war.entity;
 
 import lombok.*;
 
-@Data
+@Setter
+@Getter
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Entity {
-    private String name;
+    private final String name;
     private int health = 100;
     private int lives = 5;
     private int powerLevel;
