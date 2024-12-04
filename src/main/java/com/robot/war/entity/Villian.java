@@ -11,8 +11,8 @@ import lombok.Getter;
 public class Villian extends Entity implements SpecialAbility, TypeOfAttack {
 
     @Builder
-    public Villian(String name) {
-        super(name);
+    public Villian(String name, int powerLevel) {
+        super(name, powerLevel);
     }
 
     @Override
@@ -21,13 +21,13 @@ public class Villian extends Entity implements SpecialAbility, TypeOfAttack {
     }
 
     @Override
-    public int lifeAttack() {
-        return 0;
+    public float lifeAttack() {
+        return (getPowerLevel() + 2) / 3;
     }
 
     @Override
-    public int shieldAttack() {
-        return 0;
+    public float shieldAttack() {
+        return (getPowerLevel() / 3) + 2;
     }
 }
 

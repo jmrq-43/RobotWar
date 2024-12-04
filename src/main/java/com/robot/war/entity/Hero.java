@@ -2,8 +2,8 @@ package com.robot.war.entity;
 
 import com.robot.war.entity.interfaces.SpecialAbility;
 import com.robot.war.entity.interfaces.TypeOfAttack;
-import lombok.EqualsAndHashCode;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter
@@ -11,8 +11,8 @@ import lombok.Getter;
 public class Hero extends Entity implements SpecialAbility, TypeOfAttack {
 
     @Builder
-    public Hero(String name) {
-        super(name);
+    public Hero(String name, int powerLevel) {
+        super(name, powerLevel);
     }
 
     @Override
@@ -21,14 +21,12 @@ public class Hero extends Entity implements SpecialAbility, TypeOfAttack {
     }
 
     @Override
-    public int lifeAttack() {
-        return 0;
+    public float lifeAttack() {
+        return (getPowerLevel() * 2) / 4;
     }
 
     @Override
-    public int shieldAttack() {
-        return 0;
+    public float shieldAttack() {
+        return (getPowerLevel() + 3) / 4;
     }
 }
-
-
