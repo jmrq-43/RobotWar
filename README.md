@@ -9,6 +9,7 @@ classDiagram
         - string name
         - int health
         - int lives
+        - float powerLevel
     }
         
     class SpecialAbility{
