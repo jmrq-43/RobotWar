@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter
-@EqualsAndHashCode(callSuper = true)
 public class Hero extends Entity implements SpecialAbility, TypeOfAttack {
 
     @Builder
@@ -28,5 +27,10 @@ public class Hero extends Entity implements SpecialAbility, TypeOfAttack {
     @Override
     public float shieldAttack() {
         return (getPowerLevel() + 3) / 4;
+    }
+
+    @Override
+    public String toString() {
+        return "name: " + getName() + ", lives: " + getLives() + ", health: " + getHealth() + ", power: " + getPowerLevel();
     }
 }

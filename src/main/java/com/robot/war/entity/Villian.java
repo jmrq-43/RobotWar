@@ -29,6 +29,11 @@ public class Villian extends Entity implements SpecialAbility, TypeOfAttack {
     public float shieldAttack() {
         return (getPowerLevel() / 3) + 2;
     }
+
+    @Override
+    public String toString() {
+        return "name: " + getName() + ", lives: " + getLives() + ", health: " + getHealth() + ", power: " + getPowerLevel();
+    }
 }
 
 
