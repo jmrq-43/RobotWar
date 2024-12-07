@@ -3,14 +3,13 @@ package com.robot.war.entity;
 import com.robot.war.entity.interfaces.SpecialAbility;
 import com.robot.war.entity.interfaces.TypeOfAttack;
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter
 public class Hero extends Entity implements SpecialAbility, TypeOfAttack {
 
     @Builder
-    public Hero(String name, int powerLevel) {
+    public Hero(String name, float powerLevel) {
         super(name, powerLevel);
     }
 

@@ -4,14 +4,13 @@ import lombok.*;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @RequiredArgsConstructor
+@NoArgsConstructor(force = true)
 public class Entity {
+    @NonNull
     private final String name;
     private int health = 100;
     private int lives = 5;
+    @NonNull
     private final float powerLevel;
-
 }
-
-
