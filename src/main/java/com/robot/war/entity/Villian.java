@@ -5,13 +5,13 @@ import com.robot.war.entity.interfaces.TypeOfAttack;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 
 @Getter
-@EqualsAndHashCode(callSuper = true)
 public class Villian extends Entity implements SpecialAbility, TypeOfAttack {
 
     @Builder
-    public Villian(String name, int powerLevel) {
+    public Villian(String name, float powerLevel) {
         super(name, powerLevel);
     }
 
