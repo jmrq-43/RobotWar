@@ -1,7 +1,10 @@
 package com.robot.war.play.controller;
 
+import com.robot.war.entity.Entity;
 import com.robot.war.entity.Hero;
 import com.robot.war.entity.Villian;
+
+import static com.robot.war.play.controller.Verifier.healthVerifier;
 
 public class Controller {
     private Hero hero;
@@ -18,24 +21,16 @@ public class Controller {
                 .build();
     }
 
-    private void verifyHealhtHero() {
-        if (hero.getHealth() == 0) {
-            int life = -this.hero.getLives();
-            System.out.println("the hero has " + life + " life(s)");
-            this.hero.setHealth(100);
-        }
-
-    }
-
-    private void verifyHealhtVillain() {
-        if (this.villian.getHealth() == 0) {
-            int life = -this.villian.getLives();
-            System.out.println("the villain has " + life + " life(s)");
-            this.villian.setHealth(100);
-        }
+    public boolean verifyHealth(Entity entity){
+        hero.setHealth(1);
+        return healthVerifier(hero);
     }
 
     public String seeHero() {
         return hero.toString() + "\n" + villian.toString();
+    }
+
+    public String see(){
+        return verifyHealth(hero) + "\n" + seeHero();
     }
 }
