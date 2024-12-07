@@ -21,7 +21,7 @@ public class Controller {
                 .build();
     }
 
-    public boolean verifyHealth(Entity entity){
+    public boolean verifyHealth(Entity entity) {
         hero.setHealth(1);
         return healthVerifier(hero);
     }
@@ -30,7 +30,7 @@ public class Controller {
         return hero.toString() + "\n" + villian.toString();
     }
 
-    public String see(){
+    public String see() {
         return verifyHealth(hero) + "\n" + seeHero();
     }
 }

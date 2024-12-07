@@ -9,7 +9,7 @@ public class Verifier {
     private Villian villian;
 
 
-    public static <T extends Entity> boolean healthVerifier(T entity){
+    public static <T extends Entity> boolean healthVerifier(T entity) {
         return entity.getHealth() == 0;
     }
 
